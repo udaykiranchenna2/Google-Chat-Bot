@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\GoogleChatController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\GoogleChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,9 @@ use Inertia\Inertia;
  */
 
 Route::get('/', function () {
+	if (Auth::check()) {
+		return redirect('/chat-bot');
+	}
 	return Inertia::render('Welcome', [
 		'canLogin' => Route::has('login'),
 		'canRegister' => Route::has('register'),
@@ -30,10 +34,10 @@ Route::middleware([
 	config('jetstream.auth_session'),
 	'verified',
 ])->group(function () {
-	Route::get('/dashboard', function () {
+	Route::get('/chat-bot', function () {
 		return Inertia::render('Dashboard');
 	})->name('dashboard');
-
+	
 	Route::post('/google-chat-req', [GoogleChatController::class, 'googleChatReq'])->name('google-chat-req');
 
 });

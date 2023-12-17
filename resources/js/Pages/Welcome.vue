@@ -41,7 +41,8 @@ defineProps({
                             </svg>
                         </div>
 
-                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">UDAYKIRAN'S CHAT BOT (Login to use)</h2>
+                        <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">UDAYKIRAN'S CHAT BOT (Register and login to use)</h2>
+
 
                         <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                             Made in just 15 mins using laravel, Vue js and tailwindcss with complete authentication system. Login to access the chat bot.

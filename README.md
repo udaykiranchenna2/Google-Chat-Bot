@@ -13,7 +13,7 @@ NOTE: I developed it with in 15 mins just for dev purpose. ALL THE BEST MY FELLO
 ## Installation
 Clone the Repository
 ```bash
-git clone https://github.com/udaykiranchenna2/Chat_API.git
+git clone [https://github.com/udaykiranchenna2/Chat_API.git](https://github.com/udaykiranchenna2/Google-Chat-Bot/)
 ```
 ```bash
 composer install 
